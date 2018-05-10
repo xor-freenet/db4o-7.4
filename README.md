@@ -35,3 +35,12 @@ ant jar
 - ```build-db4ojdk*/```: Optimizations. The JDK version in their name is
   the minimum Java version required for each.
   They are copied into the ```build/``` directory by the build script.
+
+### TODOs
+
+- While the unit test files are present they are currently ignored by the
+  Ant builder.  
+  This is because whoever committed db4o to the repository did not include
+  db4o's "db4ounit" library which is needed for the tests.  
+  The code of it should be added to this repository and the Ant builder
+  should be amended to run the unit tests.
