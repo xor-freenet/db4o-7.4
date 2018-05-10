@@ -1,0 +1,11 @@
+The directory names "db4ojdk1.2" and "db4ojdk5" might sound like these
+are versions of db4o for outdated Java versions and thus could be
+removed.
+
+This is NOT the case:
+Instead these directories contain additional optimizations which are
+shipped on top of the main db4o classes.
+The version in their name indicates the minimal Java version required
+for them.
+
+Source of this information: See the Ant build.xml in the root directory.
