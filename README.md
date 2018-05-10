@@ -40,6 +40,11 @@ ant jar
 
 ### TODOs
 
+- Check whether the class files which this produces are binary equal to
+  what freenet-ext.jar of contrib tag v29 contains.  
+  To validate that do a fresh compile of freenet-ext.jar on the same
+  machine.
+
 - While the unit test files are present they are currently ignored by the
   Ant builder.  
   This is because whoever committed db4o to the repository did not include
