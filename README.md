@@ -18,3 +18,16 @@ NOTICE: This doesn't include the commit history of db4o. Instead to
 ensure the code is the very same version as what has proven to work well
 it is a fork of Freenet's contrib repository with anything besides db4o
 removed.
+
+### Building
+```shell
+ant clean
+ant jar
+```
+
+### Build output
+- ```db4o.jar```: The main output.
+- ```build/``` directory: Classes of ```db4o.jar```
+- ```build-*/``` directories: Optimizations. They are copied into the
+  ```build/``` directory by the build script. The JDK version in their
+  name is the minimum Java version required for each.
