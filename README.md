@@ -27,7 +27,9 @@ ant jar
 
 ### Build output
 - ```db4o.jar```: The main output.
-- ```build/``` directory: Classes of ```db4o.jar```
-- ```build-*/``` directories: Optimizations. They are copied into the
-  ```build/``` directory by the build script. The JDK version in their
-  name is the minimum Java version required for each.
+- ```build/```: Classes of ```db4o.jar```
+- ```build-db4oj/```: Db4o main classes without optimizations.
+  These are copied into the ```build/``` directory by the build script.
+- ```build-db4ojdk*/```: Optimizations. The JDK version in their name is
+  the minimum Java version required for each.
+  They are copied into the ```build/``` directory by the build script.
