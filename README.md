@@ -24,12 +24,19 @@ repository with anything besides db4o removed. This may or may not be
 equal to what db4o has once shipped officially.
 
 ### Building
+
+In order to ease validating that this produces a build which is
+identical to what was shipped with freenet-ext this does not use Gradle
+yet but ships the same Ant builder as used by freenet-ext.  
+Thus you can build using:
+
 ```shell
 ant clean
 ant jar
 ```
 
 ### Build output
+
 - ```db4o.jar```: The main output.
 - ```build/```: Classes of ```db4o.jar```
 - ```build-db4oj/```: Db4o main classes without optimizations.
