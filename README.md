@@ -3,13 +3,15 @@
 This repository contains version 7.4.63.11890 of db4o as it was shipped
 by Freenet's contrib repository, aka "freenet-ext.jar", as of tag v29.
 
-That's what has been deployed on the Freenet network from at least 2011
-to 2018 and what has proven to work well with WebOfTrust and Freetalk.
+This is NOT the latest version of db4o!  
+Instead it is what has been deployed at Freenet from at least 2011 to
+2018 and what has proven to work well with WebOfTrust and Freetalk.
+Later versions of db4o have been tried but caused severe bugs which
+must first be fixed before we upgrade.
 
 freenet-ext.jar used to be a monolithic JAR intended to ship all of
 Freenet's dependencies. As Freenet is nowadays capable of shipping
-individual JARs freenet-ext.jar is going away.
-
+individual JARs freenet-ext.jar is going away.  
 As a consequence db4o is being moved into this repository so it can be
 compiled into WebOfTrust and Freetalk directly as they rely heavily on
 db4o and removing its usage would be at least a year of work for each.
