@@ -32,10 +32,6 @@
 		<tstamp/>
 
 		<javac srcdir="${src}" destdir="${build-db4oj}" debug="on" optimize="on" source="${javac.target.version}">
-			<classpath>
-				<pathelement location="${freenet-ext.location}"/>
-			</classpath>
-
 			<include name="db4oj/**/*.java"/>
 			<exclude name="db4oj/test/**/*.java"/>
 		</javac>
