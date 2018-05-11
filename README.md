@@ -57,4 +57,10 @@ ant jar
   This is because whoever committed db4o to the repository did not include
   db4o's "db4ounit" library which is needed for the tests.  
   The code of it should be added to this repository and the Ant builder
-  should be amended to run the unit tests.
+  should be amended to run the unit tests.  
+  However this should IMHO be postponed until after the initial release
+  of Freenet without contrib / of WoT with bundled db4o:  
+  There likely is a reason that whoever added db4o to contrib left out
+  the tests, and that reason may be that they fail frequently. The
+  complex procedure of getting rid of contrib at Freenet should not
+  unnecessarily be complicated by introducing fragile tests here.
