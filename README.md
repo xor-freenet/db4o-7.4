@@ -35,6 +35,10 @@ ant clean
 ant jar
 ```
 
+As of tag v31 of this repository and tag v29 of contrib it has been
+manually validated that the db4o class files as built and JAR'ed by this
+repository are binary equal to the ones built and JAR'ed by contrib.
+
 ### Build output
 
 - ```db4o.jar```: The main output.
@@ -46,11 +50,6 @@ ant jar
   They are copied into the ```build/``` directory by the build script.
 
 ### TODOs
-
-- Check whether the class files which this produces are binary equal to
-  what freenet-ext.jar of contrib tag v29 contains.  
-  To validate that do a fresh compile of freenet-ext.jar on the same
-  machine.
 
 - While the unit test files are present they are currently ignored by the
   Ant builder.  
