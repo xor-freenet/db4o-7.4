@@ -12,7 +12,7 @@
 	<property name="build-db4ojdk1.2" location="build-db4ojdk1.2"/>
 	<property name="build-db4ojdk5" location="build-db4ojdk5"/>
 	<property name="jarfile" location="db4o.jar"/>
-	<property name="javac.target.version" value="1.5"/>
+	<property name="javac.target.version" value="1.7"/>
 
 	<assertions>
 		<enable/>
