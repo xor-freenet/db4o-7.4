@@ -1,0 +1,24 @@
+language: java
+
+dist: trusty
+# Disabling sudo routes the build to a Docker container instead of a VM
+# which speeds up the build.
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - ant
+
+cache:
+  apt: true
+
+script: ant
+
+jdk:
+  - oraclejdk9
+  - oraclejdk8
+  - openjdk8
+  # openjdk9: As of 2018-05-12 isn't available on Travis yet.
+  # oraclejdk7: Not supported anymore: https://github.com/travis-ci/travis-ci/issues/7884#issuecomment-308451879
+  # openjdk7: Not supported anymore: https://github.com/travis-ci/travis-ci/issues/8503
