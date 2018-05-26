@@ -19,7 +19,25 @@
 	     Ant command! -->
 	<property name="javac.source.version" value="1.6"/>
 	<property name="javac.target.version" value="1.6"/>
-
+	
+	<presetdef name="javac">
+		<!--
+		includeAntRuntime = "Whether to include the Ant run-time libraries in the classpath;
+		defaults to yes, unless build.sysclasspath is set. It is usually best to set this
+		to false so the script's behavior is not sensitive to the environment in which it
+		is run."
+		Source: https://ant.apache.org/manual/Tasks/javac.html
+		
+		I don't know why anyone would want the build system on the classpath of his project,
+		this might be an Ant misfeature.
+		
+		If we don't set this to false, we will get "warning: 'includeantruntime' was not
+		set defaulting to build.sysclasspath=last; set to false for repeatable builds".
+		TODO: Remove when Ant fixes this.
+		-->
+		<javac includeantruntime="false"/>
+	</presetdef>
+	
 	<assertions>
 		<enable/>
 	</assertions>
