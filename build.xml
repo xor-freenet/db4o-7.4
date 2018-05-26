@@ -12,6 +12,7 @@
 	<property name="build-db4ojdk1.2" location="build-db4ojdk1.2"/>
 	<property name="build-db4ojdk5" location="build-db4ojdk5"/>
 	<property name="jarfile" location="db4o.jar"/>
+	<property name="javac.source.version" value="1.7"/>
 	<property name="javac.target.version" value="1.7"/>
 
 	<assertions>
@@ -31,12 +32,12 @@
 		<!-- Create the time stamp -->
 		<tstamp/>
 
-		<javac srcdir="${src}" destdir="${build-db4oj}" debug="on" optimize="on" source="${javac.target.version}">
+		<javac srcdir="${src}" destdir="${build-db4oj}" debug="on" optimize="on" source="${javac.source.version}" target="${javac.target.version}">
 			<include name="db4oj/**/*.java"/>
 			<exclude name="db4oj/test/**/*.java"/>
 		</javac>
 
-		<javac srcdir="${src}" destdir="${build-db4ojdk1.2}" debug="on" optimize="on" source="${javac.target.version}">
+		<javac srcdir="${src}" destdir="${build-db4ojdk1.2}" debug="on" optimize="on" source="${javac.source.version}" target="${javac.target.version}">
 			<classpath>
 				<pathelement location="${build-db4oj}"/>
 			</classpath>
@@ -45,7 +46,7 @@
 			<exclude name="db4ojdk1.2/test/**/*.java"/>
 		</javac>
 
-		<javac srcdir="${src}" destdir="${build-db4ojdk5}" debug="on" optimize="on" source="${javac.target.version}">
+		<javac srcdir="${src}" destdir="${build-db4ojdk5}" debug="on" optimize="on" source="${javac.source.version}" target="${javac.target.version}">
 			<classpath>
 				<pathelement location="${build-db4oj}"/>
 				<pathelement location="${build-db4ojdk1.2}"/>
