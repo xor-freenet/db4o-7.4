@@ -12,8 +12,13 @@
 	<property name="build-db4ojdk1.2" location="build-db4ojdk1.2"/>
 	<property name="build-db4ojdk5" location="build-db4ojdk5"/>
 	<property name="jarfile" location="db4o.jar"/>
-	<property name="javac.source.version" value="1.7"/>
-	<property name="javac.target.version" value="1.7"/>
+	<!-- As of Git tag v33 of this repository db4o does not include any
+	     code which is more recent than Java 1.5. However recent javac
+	     versions do require this to be at least 1.6.
+	     You can override this by passing the properties to the
+	     Ant command! -->
+	<property name="javac.source.version" value="1.6"/>
+	<property name="javac.target.version" value="1.6"/>
 
 	<assertions>
 		<enable/>
